@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Passage Planner</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <h1>Passage Planner</h1>
+        <form id="Planner-form">
+            <h2>Vessel information</h2>
+          <label for="departure-time">Departure time</label>
+<input type="datetime-local" id="departure-time">
+<label for="speed">Speed</label>
+<input id="speed" placeholder="Speed">
+<label for="speed">knots</label>
+</form>
+<h2>Coordinates</h2>
+<form id="coordinates-form">
+<label for="name">Name of location</label>
+<input id="name" placeholder="Name of location">
+<div>
+<label for="latitude-degrees">Latitude</label>
+<input id="latitude-degrees" type="number" placeholder="degrees">
+<label for="latitude-degrees">°</label>
+<input id="latitude-minutes" type="number" placeholder="minutes">
+<label for="latitude-minutes">′</label>
+<label for="latitude-directions">Direction</label>
+<select id="latitude-directions">
+    <option value="N">N</option>
+    <option value="S">S</option>
+</select>
+</div> 
+
+<div>
+<label for="longitude-degrees">Longitude</label>
+<input id="longitude-degrees" type="number" placeholder="degrees">
+<label for="longitude-degrees">°</label>
+<input id="longitude-minutes" type="number" placeholder="minutes">
+<label for="longitude-minutes">′</label>
+<label for="longitude-directions">Direction</label>
+<select id="longitude-directions">
+    <option value="E">E</option>
+    <option value="W">W</option>
+</select>
+</div>
+<button id="add-destination" type="submit">Add destination</button>
+
+        </form>
+
+        <h2>Destinations</h2>
+        <ul id="destinations-list"></ul>
+        <p id="ETA" class="card"></p>
+
+        <table>
+    <thead>
+        <tr><th>#</th><th>Name</th><th>Position</th><th>Leg (nm)</th><th>Total (nm)</th><th>ETA</th><th></th></tr>
+    </thead>
+    <tbody id="route-body"></tbody>
+</table>
+<script src="script.js"></script>
+    </body>
+</html>
